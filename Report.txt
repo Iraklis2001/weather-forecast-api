@@ -1,0 +1,37 @@
+Weather Forecast API – Report
+
+What I Did
+- Built a weather data processing system using Python and the Meteomatics Weather API.
+- Collected 7-day forecasts for 3 cities and stored them in SQLite using SQLAlchemy.
+- Created a helper script `test_db.py` to verify that all forecast data was correctly stored in the database.
+- Created a RESTful Flask API to expose the forecast data with analytical endpoints.
+- Exported the database into CSV files for easy sharing and backup.
+
+Key Decisions
+- Used SQLite for simplicity and portability.
+- Picked Flask for the web API due to its lightweight and fast setup.
+- Chose Pandas for easy CSV exporting.
+- Parsed the JSON manually instead of using a Meteomatics SDK for full control.
+
+What Slowed Me Down / What Was Unexpected
+- This was my first time using Python 3.12 and working outside of PyCharm, which I usually use.
+- Learning how to manage the environment and dependencies manually (venv + pip) was new.
+- Understanding the Meteomatics API query format and datetime handling took time.
+
+Challenges & Solutions
+- Missing modules 
+ Solved by installing with `pip install` and using `requirements.txt`.
+- Deprecation warning in datetime
+ Solved by switching to `.date()` and consistent UTC usage.
+- Complex nested JSON parsing
+ Solved by printing structure and extracting each parameter manually.
+
+Tools & Techniques Used
+- Python 3.12
+- Flask (REST API)
+- SQLAlchemy (ORM)
+- SQLite (Database)
+- Requests (API calls)
+- Pandas (CSV export)
+- PowerShell (manual setup without IDE)
+- VS Code
